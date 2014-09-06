@@ -22,3 +22,8 @@ for x in range(z):
 
 while y > z:
     pass
+
+while True:
+    pass
+    if y > z:
+        break
