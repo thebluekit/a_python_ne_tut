@@ -19,11 +19,16 @@ z = 10
 
 for x in range(z):
     pass
+    print(filled_li)
 
 while y > z:
     pass
+    print(filled_tup)
+    y -= 1
 
 while True:
     pass
+    print(filled_dict["one"])
+    y += 1
     if y > z:
         break
