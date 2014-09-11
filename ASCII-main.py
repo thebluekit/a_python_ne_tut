@@ -34,8 +34,7 @@ if a == ' ':
 
     image = Image.open("image-size-good.bmp")
     draw = ImageDraw.Draw(image)
-    width3 = image.size[0]
-    height3 = image.size[1]
+    width3, height3 = image.size
     pix = image.load()
     main_dict = {(str(x) + '-' + str(y)): str(s) for x, y, s in zip(range(0, 260, 10), range(9, 260, 10), 'MNABDEW0RD9X1L2T3VZGC8576 ')}
     str_width = ''
