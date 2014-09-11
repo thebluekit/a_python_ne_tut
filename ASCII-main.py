@@ -3,6 +3,8 @@ import os
 import time
 
 
+IMAGE_PATH = 'image.bmp'
+
 def camera():
     print('Smile...')
     print(w)
@@ -11,8 +13,7 @@ def camera():
     print(w)
     time.sleep(4)
 
-w = '====================================================='
-b = int(0)
+w = '=' * 60
 
 print('Press space to start', end='')
 a = input()
@@ -22,11 +23,8 @@ print(w)
 if a == ' ':
     camera()
     text = open('text.txt', 'w')
-    img_path = 'image.bmp'
-    img = Image.open(img_path)
+    img = Image.open(IMAGE_PATH)
     img = img.filter(ImageFilter.BLUR)
-    #width2 = width1
-    #height2 = int(height1 * 0.666)
     width2 = int(424)
     height2 = int(240 * 0.666)
     img = img.resize((width2, height2))
@@ -51,12 +49,7 @@ if a == ' ':
             draw.point((x, y), (c, c, c))
             q = str(c // 10 * 10) + '-' + str(c // 10 * 10 + 9)
 
-            #print(c)
-
-            if b < c:
-                b = c
-            else:
-                pass
+            b = c if b < c else b
 
             str_width += main_dict[q]
 
